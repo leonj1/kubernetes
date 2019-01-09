@@ -75,3 +75,7 @@ echo "kubeadmin" | passwd --stdin root >/dev/null 2>&1
 
 # Update vagrant user's bashrc file
 echo "export TERM=xterm" >> /etc/bashrc
+
+# Add vagrant user to docker group
+usermod -aG docker vagrant
+
